@@ -1,8 +1,8 @@
 /* ·················· SideBar Controller ·················· */
 /* Hamburger Menu */
-const hamburgerBtn = document.getElementById("hamburgerBtn");
+const hamburgerBtn = document.getElementById("sidebarBtn");
 const sidebar = document.getElementById("sidebar");
-const links = document.querySelectorAll(".Links li");
+const links = document.querySelectorAll(".sidebar__link");
 
 // Open/Close sidebar
 hamburgerBtn.addEventListener("click", () => {

@@ -1,0 +1,354 @@
+:root {
+    /* colores */
+    --color-bg: #ffffff;
+    --color-surface: #e7ebee;
+    --color-primary: #0f67f3;
+    --color-text: #000000;
+    /* tipografía */
+    --font-main: 'Inter', sans-serif;
+    /* tamaños */
+    --container-width: 1200px;
+    /* efectos */
+    --transition: 0.3s ease;
+}
+
+/* Dark mode */
+body.dark {
+    --color-bg: black;
+    --color-surface: #25343F;
+    --color-text: #f1f5f9;
+}
+/* ============================== RESET ============================== */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+}
+h1 {
+    font-size: 3rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h2 {
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h3,p {
+    font-size: 1.5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/* ============================== SIDEBAR ============================== */
+.sidebar {
+    width: 90px;
+    min-height: 100vh;
+    background: var(--color-surface);
+    border-right: 5px solid var(--color-primary);
+    font-weight: bold;
+}
+.sidebar .sidebar__menu {
+    margin-top: 1rem;
+    list-style: none;
+    padding: 0px;
+}
+.sidebar .sidebar__menu li {
+  padding: 1rem;
+  color: var(--color-primary);
+  cursor: pointer;
+  border-radius: 12 0 0 12;
+  transition: background 1s;
+}
+.sidebar .sidebar__menu li:hover,
+.sidebar .sidebar__menu li.activeLink {
+    background: var(--color-primary);
+    color: var(--color-surface);
+}
+
+.sidebar .sidebar__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3;
+    margin-top: 1rem;
+}
+
+/* ============================== SWIPER ============================== */
+.swiper {
+    width: 95%;
+    height: 100vh;
+}
+.swiper-slide {
+    display: flex;
+    height: 100%;
+}
+
+/* ============================== SECTIONS ============================== */
+.swiper-slide .section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: var(--color-bg);
+}
+.swiper-slide .section .section__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    height: 100%;
+    padding: 2rem;
+    background: var(--color-surface);
+}
+.swiper-slide .section .section__container .section__content {
+    width: 100%;
+    padding: 2rem;
+    background: var(--color-bg);
+}
+/* ============================== HOME ============================== */
+#home {
+    background: var(--color-bg);
+}
+#home .section__content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+/* ···· Left ···· */
+#home .section__content .content__left {
+    display: flex;
+    justify-content: center;
+}
+#home .section__content .content__left img {
+    width: 20vw;
+    min-width: 220px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 7px solid var(--color-primary);
+    transition: transform 0.3s ease,box-shadow 0.3s ease;
+}
+#home .section__content .content__left img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+/* ···· Right ···· */
+#home .section__content .content__right {
+    text-align: left;
+}
+#home .section__content .content__right h1 {
+    font-size: 2.5rem;
+    color: var(--color-text);
+}
+#home .section__content .content__right h1 span {
+    color: var(--color-primary);
+}
+#home .section__content .content__right h2 {
+    font-size: 1.5rem;
+    color: var(--color-surface);
+    margin: 0.5rem 0 1rem;
+}
+/* Typing Effect [ Software Engineer, Game Developer, Full Stack Developer ] */
+.sec-text {
+    color: var(--color-surface);
+    font-weight: 600;
+    border-right: 2px solid var(--color-surface);
+    padding-right: 5px;
+
+    animation: blink 0.7s infinite;
+}
+@keyframes blink {
+    0% { border-color: transparent; }
+    50% { border-color: var(--color-surface); }
+    100% { border-color: transparent; }
+} 
+#home .section__content .content__right p {
+    color: var(--color-text);
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+#home .section__content .content__right .home__options {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* ============================== BUTTONS ============================== */
+.btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+/* ·······  Primary Button  ······· */
+.btn.primary {
+    background: var(--color-primary);
+    color: white;
+}
+.btn.primary:hover {
+    background: var(--color-primary-dark);
+    transform: translateY(-2px);
+}
+/* ·······  Secondary Button  ······· */
+.btn.secondary {
+    background: transparent;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+}
+.btn.secondary:hover {
+    background: var(--color-primary);
+    color: var(--color-bg);
+    transform: translateY(-2px);
+}
+/* ·······  Sidebar Button  ······· */
+.sidebar__btn {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1100;
+
+    background: var(--color-primary);
+    color: var(--color-bg);
+    border: none;
+    padding: 0.6rem 0.9rem;
+    border-radius: 8px;
+    cursor: pointer;
+
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+/* animación cuando se mueve */
+.sidebar__btn.moved {
+    left: 280px;
+}
+/* ·······  Theme Button  ······· */
+.sidebar__theme-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: auto;
+    padding: 0.6rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+.sidebar__theme-btn img {
+    width: 32px;
+    transition: transform 0.3s ease;
+}
+.sidebar__theme-btn img {
+    width: 28px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.sidebar__theme-btn.fade img {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+/* ============================== RESPONSIVE ============================== */
+/* ·········· home ·········· */
+@media (max-width: 768px) {
+    #home .section__content {
+        grid-template-columns: 1fr; /* se vuelve una sola columna */
+    }
+    /* sidebar */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 150px;
+        height: 100vh;
+        transform: translateX(-100%);
+        transition: transform 0.4s ease;
+        z-index: 999;
+    }
+    .sidebar__btn {
+        display: block;
+        transition: all 0.4s ease;
+    }
+    .sidebar__btn.moved {
+        background-color: var(--color-primary);
+        border-radius: 50px;
+        color: var(--color-bg);
+        font-weight: bold;
+        left: 150px;
+        top: 50%;
+        transform: translateX(-50%);
+    }
+    .sidebar__btn.moved.fade .sidebar__btn.moved{
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    .sidebar.show {
+        transform: translateX(0);
+    }
+    .sidebar-header {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+    }
+
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    #home .section__content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    #home .section__content .content__right {
+        text-align: center;
+    }
+    #home .section__content .content__right p {
+        margin: 0 auto;
+    }
+    #home .section__content .content__right .home__options {
+        justify-content: center;
+    }
+}
+/* Movil */
+@media (max-width: 500px) {
+    #home .section__content .content__left img {
+        width: 50vw;
+        min-width: 0;
+    }
+
+    #home .section__content .content__right h1 {
+        font-size: 1rem;
+    }
+
+    #home .section__content .content__right h2 {
+        font-size: 0.5rem;
+    }
+
+    #home .section__content .content__right p {
+        font-size: 12px;
+    }
+
+    #home .section__content .content__right .home__options .btn {
+        width: 100%;
+        max-width: 150px;
+    }
+}
+
+
+/* ============================== RESPONSIVE ============================== */

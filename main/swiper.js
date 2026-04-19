@@ -23,8 +23,8 @@ function Navigate(indx) {
 }
 /* Update the styles when is change the section */
 function updateActiveLink(indx) {
-  document.querySelectorAll(".Links li").forEach(li => li.classList.remove("activeLink"));
-  document.querySelectorAll(".Links li")[indx].classList.add("activeLink");
+  document.querySelectorAll(".sidebar__link").forEach(li => li.classList.remove("activeLink"));
+  document.querySelectorAll(".sidebar__link")[indx].classList.add("activeLink");
   swiper.slideTo(indx);
 }
 swiper.on("slideChange", () => {
