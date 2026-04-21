@@ -43,7 +43,7 @@
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
       <!-- ============================== Home ============================== -->
-      <!-- Slide -->
+      <!-- Home -->
       <div class="swiper-slide">
         <section class="section" id="home">
           <!-- Hero Content -->
@@ -68,7 +68,7 @@
           </div>
         </section>
       </div>
-
+      <!-- About Me -->
       <div class="swiper-slide">
         <section class="section" id="about">
           <!-- About Content -->
@@ -92,12 +92,26 @@
                   
                   <div class="social-card__icons">
                       <ul>
-                        <li><img src="assets/icons/platforms/facebook.ico" alt=""></li>
-                        <li><img src="assets/icons/platforms/github.ico" alt=""></li>
-                        <li><img src="assets/icons/platforms/instagram.ico" alt=""></li>
-                        <li><img src="assets/icons/platforms/linkedin.ico" alt=""></li>
+                        <li>
+                          <a href="https://github.com/schisavo" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/icons/platforms/github.ico" alt="Github">
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="www.linkedin.com/in/sebastian-chisavo-forero-405aa0310" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/icons/platforms/linkedin.ico" alt="Linkedin">
+                          </a>
+                        </li>
+
+                        <li>
+                          <!-- 🔹 WhatsApp -->
+                          <a href="https://wa.me/573008350972" target="_blank">
+                            <img src="assets/icons/platforms/whatsapp.ico" alt="WhatsApp">
+                          </a>
+                        </li>
                       </ul>
-                    </div>
+                  </div>
                 </div>
               </div>
               <!-- Column 2 -->
@@ -137,10 +151,63 @@
           </div>
         </section>
       </div>
-
+      <!-- Services -->
       <div class="swiper-slide">
         <section class="section" id="services">
-          Slide 3
+            <div class="section__container">
+              <section class="section__content">
+                <!-- Services Title -->
+                <h2>Services</h2>
+                <!-- Services Cards Container -->
+                  <div class="services">
+
+                    <article class="service-card">
+                      <div class="service-card__icon"><span>🎨</span></div>
+                      <h3 class="service-card__title">Design</h3>
+                      <p class="service-card__text">
+                        3D modeling, PixelArt, and UI/UX design with 
+                        Photoshop & Illustrator.
+                      </p>
+                    </article>
+
+                    <article class="service-card">
+                      <div class="service-card__icon"><span>💻</span></div>
+                      <h3 class="service-card__title">Software Development</h3>
+                      <p class="service-card__text">
+                        Web, mobile, and game development using modern architectures, 
+                        building scalable systems.
+                      </p>
+                    </article>
+
+                    <article class="service-card">
+                      <div class="service-card__icon"><span>🗄️</span></div>
+                      <h3 class="service-card__title">Databases</h3>
+                      <p class="service-card__text">
+                        Design and management of SQL, NoSQL, and graph databases.
+                      </p>
+                    </article>
+
+                    <article class="service-card">
+                      <div class="service-card__icon"><span>🤖</span></div>
+                      <h3 class="service-card__title">AI & Automation</h3>
+                      <p class="service-card__text">
+                        Development of AI models and intelligent workflows, 
+                        integrating automation with tools like n8n.
+                      </p>
+                    </article>
+
+                    <article class="service-card">
+                      <div class="service-card__icon"><span>🔧</span></div>
+                      <h3 class="service-card__title">Tools</h3>
+                      <p class="service-card__text">
+                        GitHub, version control, and structured workflows for collaborative 
+                        development.
+                      </p>
+                    </article>
+
+                  </div>
+              </section>
+            </div>
         </section>
       </div>
 
@@ -149,10 +216,59 @@
           Slide 4
         </section>
       </div>
-
+      <!-- Contact Me -->
       <div class="swiper-slide">
         <section class="section" id="contact">
-          Slide 5
+          <!-- Hero Content -->
+          <div class="section__container">
+            <section class="section__content">
+              <!-- Column 1 -->
+              <div class="content__left">
+                <h1>Contact Me</h1>
+
+                <form id="contactForm">
+                  <input type="text" name="user_name" placeholder="Full Name" required>
+                  <input type="email" name="user_email" placeholder="Email" required>
+                  <textarea name="message" placeholder="Message" required></textarea>
+
+                  <!-- honeypot anti-bots -->
+                  <input type="text" name="company" class="hidden-field">
+
+                  <button type="submit" class="btn secondary">
+                    Contact Me
+                  </button>
+                </form>
+              </div>
+              <!-- Column 2 -->
+              <div class="content__right">
+                  <p>Email:<span>sebastianchisavoforero@gmail.com</span></p>
+                  <p>Phone:<span>+57 3008350972</span></p>
+                  <p>Address:<span>Pereira - Risaralda - Colombia</span></p>
+                  <div class="social-card__icons">
+                      <ul>
+                        <li>
+                          <a href="https://github.com/schisavo" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/icons/platforms/github.ico" alt="Github">
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="www.linkedin.com/in/sebastian-chisavo-forero-405aa0310" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/icons/platforms/linkedin.ico" alt="Linkedin">
+                          </a>
+                        </li>
+
+                        <li>
+                          <!-- 🔹 WhatsApp -->
+                          <a href="https://wa.me/573008350972" target="_blank">
+                            <img src="assets/icons/platforms/whatsapp.ico" alt="WhatsApp">
+                          </a>
+                        </li>
+                      </ul>
+                  </div>
+              </div>
+            </section>
+          </div>
         </section>
       </div>
 
@@ -171,12 +287,13 @@
   
   
   </div>
-
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script src="main/swiper.js"></script>
   <script src="main/sidebar.js"></script>
   <script src="main/typing.js"></script>
   <script src="main/theme.js"></script>
   <script src="main/download.js"></script>
+  <script src="main/email.js"></script>
   
 </body>
 </html>
