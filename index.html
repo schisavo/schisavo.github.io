@@ -43,7 +43,6 @@
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
       <!-- ============================== Home ============================== -->
-      <!-- Home -->
       <div class="swiper-slide">
         <section class="section" id="home">
           <!-- Hero Content -->
@@ -60,15 +59,15 @@
                   <p> Focused on designing and building scalable systems, with experience in web, mobile, and interactive 3D environments. </p>
                   <!-- Hero Buttons -->
                   <div class="home__options">
-                    <button class="btn primary">Hire Me</button>
-                    <button class="btn secondary">Contact Me</button>
+                    <button class="btn primary" data-target="1">Hire Me</button>
+                    <button class="btn secondary" data-target="4">Contact Me</button>
                   </div>
               </div>
             </section>
           </div>
         </section>
       </div>
-      <!-- About Me -->
+      <!-- ============================== About Me ============================== -->
       <div class="swiper-slide">
         <section class="section" id="about">
           <!-- About Content -->
@@ -137,10 +136,10 @@
                   <div class="personal-card__info">
                     <h3 class="personal-card__title">Personal Information</h3>
                     <ul class="personal-card__list">
-                      <li><strong>Email</strong> sebastianchisavoforero@gmail.com</li>
-                      <li><strong>Phone</strong> +57 3008350972</li>
-                      <li><strong>Address</strong> Pereira - Risaralda - Colombia</li>
-                      <li><strong>Level</strong> <span class="badge">Engineer</span></li>
+                      <li><strong>Email: </strong> sebastianchisavoforero@gmail.com</li>
+                      <li><strong>Phone: </strong> +57 3008350972</li>
+                      <li><strong>Address: </strong> Pereira - Risaralda - Colombia</li>
+                      <li><strong>Level: </strong> <span class="badge">Engineer</span></li>
                     </ul>
                   </div>
 
@@ -151,19 +150,20 @@
           </div>
         </section>
       </div>
-      <!-- Services -->
+      <!-- ============================== Services ============================== -->
       <div class="swiper-slide">
         <section class="section" id="services">
             <div class="section__container">
               <section class="section__content">
                 <!-- Services Title -->
-                <h2>Services</h2>
+                <h1>Services</h1>
                 <!-- Services Cards Container -->
                   <div class="services">
-
                     <article class="service-card">
-                      <div class="service-card__icon"><span>🎨</span></div>
-                      <h3 class="service-card__title">Design</h3>
+                      <div class="service-card__header">
+                        <span>🎨</span>
+                        <h3>Design</h3>
+                      </div>
                       <p class="service-card__text">
                         3D modeling, PixelArt, and UI/UX design with 
                         Photoshop & Illustrator.
@@ -171,8 +171,10 @@
                     </article>
 
                     <article class="service-card">
-                      <div class="service-card__icon"><span>💻</span></div>
-                      <h3 class="service-card__title">Software Development</h3>
+                      <div class="service-card__header">
+                        <span>💻</span>
+                        <h3>Software</h3>
+                      </div>
                       <p class="service-card__text">
                         Web, mobile, and game development using modern architectures, 
                         building scalable systems.
@@ -180,16 +182,10 @@
                     </article>
 
                     <article class="service-card">
-                      <div class="service-card__icon"><span>🗄️</span></div>
-                      <h3 class="service-card__title">Databases</h3>
-                      <p class="service-card__text">
-                        Design and management of SQL, NoSQL, and graph databases.
-                      </p>
-                    </article>
-
-                    <article class="service-card">
-                      <div class="service-card__icon"><span>🤖</span></div>
-                      <h3 class="service-card__title">AI & Automation</h3>
+                      <div class="service-card__header">
+                        <span>🤖</span>
+                        <h3>AI & Automation</h3>
+                      </div>
                       <p class="service-card__text">
                         Development of AI models and intelligent workflows, 
                         integrating automation with tools like n8n.
@@ -197,26 +193,80 @@
                     </article>
 
                     <article class="service-card">
-                      <div class="service-card__icon"><span>🔧</span></div>
-                      <h3 class="service-card__title">Tools</h3>
+                      <div class="service-card__header">
+                        <span>🗄️</span>
+                        <h3>Databases</h3>
+                      </div>
                       <p class="service-card__text">
-                        GitHub, version control, and structured workflows for collaborative 
-                        development.
+                        Design and management of SQL, NoSQL, and graph databases.
                       </p>
                     </article>
-
                   </div>
               </section>
             </div>
         </section>
       </div>
-
+      <!-- ============================== Projects ============================== -->
       <div class="swiper-slide">
         <section class="section" id="projects">
-          Slide 4
+            <div class="section__container">
+                <section class="section__content">
+                    <!-- Projects Title -->
+                    <h1>Projects</h1> 
+                    <!-- Projects Select Type -->
+                    <div class="botones-work">
+                        <ul>
+                            <li class="filter active" data-nombre='todos'>All</li>
+                            <li class="filter" data-nombre='diseño'>Design</li>
+                            <li class="filter" data-nombre='programacion'>Programming</li>
+                            <li class="filter" data-nombre='marketing'>Marketing</li>
+                        </ul>
+                    </div>
+
+                    <!-- Porjects Cards -->
+                    <div class="card-container">
+
+                      <div class="card project-card programacion" id="card1">
+                        <h3>⚙️ Programacion</h3>
+                        <p>Optimización de procesos con software a medida que mejora la 
+                          productividad.</p>
+                      </div>
+
+                      <div class="card project-card programacion" id="card2">
+                        <h3>⚙️ Programacion</h3>
+                        <p>Optimización de procesos con software a medida que mejora la 
+                          productividad.</p>
+                      </div>
+
+                      <div class="card project-card diseño" id="card3">
+                        <h3>⚙️ Diseño</h3>
+                        <p>Optimización de procesos con software a medida que mejora la 
+                          productividad.</p>
+                      </div>
+
+                      <div class="card project-card diseño" id="card4">
+                        <h3>⚙️ Diseño</h3>
+                        <p>Optimización de procesos con software a medida que mejora la 
+                          productividad.</p>
+                      </div>
+
+                      <div class="card project-card marketing" id="card5">
+                        <h3>⚙️ Marketing</h3>
+                        <p>Optimización de procesos con software a medida que mejora la 
+                          productividad.</p>
+                      </div>
+
+                      <div class="card project-card marketing" id="card6">
+                        <h3>⚙️ Marketing</h3>
+                        <p>Optimización de procesos con software a medida que mejora la 
+                          productividad.</p>
+                      </div>
+                    </div>
+                </section>
+            </div>
         </section>
       </div>
-      <!-- Contact Me -->
+      <!-- ============================== Contact Me ============================== -->
       <div class="swiper-slide">
         <section class="section" id="contact">
           <!-- Hero Content -->
@@ -294,6 +344,8 @@
   <script src="main/theme.js"></script>
   <script src="main/download.js"></script>
   <script src="main/email.js"></script>
+  <script src="main/filter.js"></script>
+  <script src="main/script.js"></script>
   
 </body>
 </html>
