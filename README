@@ -1,360 +1,61 @@
-GitHub creará tu web en:
+# 🚀 Portfolium 3D
 
-https://<usuario>.github.io/<nombre-repo>
+A modern and interactive 3D portfolio built with HTML, CSS, and JavaScript, using Swiper.js for smooth navigation and dynamic UI effects.
 
+---
 
-⚠️ Importante:
+## 🌐 Live Demo
+👉 https://<usuario>.github.io/<nombre-repo>/
 
-Si el repo se llama <usuario>.github.io → la web queda en la raíz https://<usuario>.github.io.
+---
 
-Si el repo tiene cualquier otro nombre (ej. portafolio) → la URL será https://<usuario>.github.io/portafolio/.
+## ✨ Features
 
-🔹 3. Flujo de trabajo a partir de aquí
+- 🎴 3D Swiper navigation
+- 🌙 Dark / Light mode toggle
+- 📱 Fully responsive design
+- 🎨 Modern UI with animations
+- 🧠 Clean and scalable architecture
+- 📂 Project filtering system
 
-Editas index.html, styles.css o lo que quieras en tu PC.
+---
 
-Guardas → pruebas en local (Live Server / Python).
+## 🛠️ Tech Stack
 
-Cuando esté bien:
+- HTML5
+- CSS3 (BEM methodology)
+- JavaScript (Vanilla)
+- Swiper.js
+- DevIcons
 
-git add .
-git commit -m "actualizo sección proyectos"
-git push origin main
+---
 
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolium 3D</title>
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <!-- DevIcons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-  <!-- Styles CSS -->
-  <link rel="stylesheet" href="styles/style.css">
-</head>
-<body>
-  <main>
-    <button class="hamburger" id="hamburgerBtn"> ☰ </button>
-    <!-- ···································   Sidebar  ··································· -->
-    <aside id="sidebar">
-      <div class="sidebar-header"></div>
-      <ul class="Links">
-        <li onclick="Navigate(0)" class="activeLink"><p>Home</p></li>
-        <li onclick="Navigate(1)"><p>About Me</p></li>
-        <li onclick="Navigate(2)"><p>Services</p></li>
-        <li onclick="Navigate(3)"><p>Projects</p></li>
-        <li onclick="Navigate(4)"><p>Contact Me</p></li>
-      </ul>
-    </aside>
-
-    <!-- ···································   3D Container  ··································· -->
-    <div class="swiper">
-      <div class="swiper-wrapper">
-        <!-- ···································   Home  ··································· -->
-        <div class="swiper-slide">
-          <div class="container"> 
-            <div class="card-container">
-              <div class="profile-card">
-                  <div class="profile-border">
-                    <img class="profile-img" src="./assets/images/profile/profile.png" alt="profile">
-                  </div>
-              </div> 
-
-              <div class="intro-card">
-                <h1>Hi! I'm <span class="stylized-name">Sebastian</span>,</h1>
-                <h2>A <span class="proffesions"> Software Engineer </span></h2>
-                <p class="heroine">
-                  Passionate about building modern, scalable web solutions.  
-                  Specialized in <strong>frontend & backend</strong> development with a focus on clean design and performance.
-                </p>
-                <div class="buttonGroup">
-                  <button class="primary-btn" data-target="1">Hire Me</button>
-                  <button class="secondary-btn" data-target="4">Contact Me</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- ···································   About me   ··································· -->
-        <div class="swiper-slide">
-          <div class="container">
-              <div class="card-container about-container">
-                <!-- About Me -->
-                <div class="info-card">
-                    <h1>About Me</h1>
-                  <p class="about-me-details">
-                    Hi, I'm <span> Sebastian Chisavo Forero</span>, a development enthusiast with a penchant for drawing and design.  
-                    My fascination with visual art and technology has led me to explore multiple facets of software development, from website creation to Android apps.  
-                    I'm also diving into AI, where I merge creativity with technology.
-                  </p>
-                  <div class="buttonGroup">
-                    <button class="secondary-btn download-btn" id="downloadBtn">
-                      Download CV
-                      <span class="progress-bar"></span>
-                    </button>
-                  </div>
-                  <div class="skills-card">
-                    <div class="personal_information">
-                      <h3>Personal Information</h3>
-                      <ul>
-                        <li><strong>Birthday</strong> 22-07-2004</li>
-                        <li><strong>Phone</strong> +57 3008350972</li>
-                        <li><strong>Email</strong> sebastianchisavoforero@gmail.com</li>
-                        <li><strong>Address</strong> Pereira - Risaralda - Colombia</li>
-                        <li><strong>Level</strong> <span>Engineer</span></li>
-                      </ul> 
-                      <div class="social_icons_container">
-                        <ul>
-                          <li><i class="devicon-html5-plain colored"></i></li>
-                          <li><i class="devicon-css3-plain colored"></i></li>
-                          <li><i class="devicon-javascript-plain colored"></i></li>
-                          <li><i class="devicon-typescript-plain colored"></i></li>
-                          <li><i class="devicon-python-plain colored"></i></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Tecnologies Carousel -->
-                <div class="info-card">
-                  <!-- Carousel -->
-                      <div class="skills-card">
-                        <div class="skills-carousel">
-                          <button class="carousel-btn prev">‹</button>
-                          <div class="carousel-track">
+## 📁 Project Structure
 
 
-                              <!-- Card: Languages -->
-                              <div class="skill-card">
-                                <h6>Languages</h6>
-                                <ul>
-                                  <li><i class="devicon-html5-plain colored"></i> HTML</li>
-                                  <li><i class="devicon-css3-plain colored"></i> CSS</li>
-                                  <li><i class="devicon-javascript-plain colored"></i> JavaScript</li>
-                                  <li><i class="devicon-typescript-plain colored"></i> TypeScript</li>
-                                  <li><i class="devicon-python-plain colored"></i> Python</li>
-                                </ul>
-                              </div>
-
-                              <!-- Card: Data Bases -->
-                              <div class="skill-card">
-                                <h6>Databases</h6>
-                                <ul>
-                                  <li><i class="devicon-mysql-plain colored"></i> MySQL</li>
-                                  <li><i class="devicon-postgresql-plain colored"></i> PostgreSQL</li>
-                                  <li><i class="devicon-sqlite-plain colored"></i> SQLite</li>
-                                  <li><i class="devicon-mongodb-plain colored"></i> MongoDB</li>
-                                </ul>
-                              </div>
-
-                              <!-- Card: Frameworks -->
-                              <div class="skill-card">
-                                <h6>Frameworks</h6>
-                                <ul>
-                                  <li><i class="devicon-react-original colored"></i> React</li>
-                                  <li><i class="devicon-angularjs-plain colored"></i> Angular</li>
-                                  <li><i class="devicon-nodejs-plain colored"></i> Node.js</li>
-                                  <li><i class="devicon-django-plain colored"></i> Django</li>
-                                  <li><i class="devicon-flutter-plain colored"></i> Flutter</li>
-                                </ul>
-                              </div>
-
-                              <!-- Card: Tools -->
-                              <div class="skill-card">
-                                <h6>Tools</h6>
-                                <ul>
-                                  <li><i class="devicon-git-plain colored"></i> Git</li>
-                                  <li><i class="devicon-github-original colored"></i> GitHub</li>
-                                  <li><i class="devicon-docker-plain colored"></i> Docker</li>
-                                  <li><i class="devicon-figma-plain colored"></i> Figma</li>
-                                  <li><i class="devicon-blender-original colored"></i> Blender</li>
-                                </ul>
-                              </div>
-                              <!-- Card: Other Interests -->
-                              <div class="skill-card">
-                                <h6>Other Interests</h6>
-                                <ul>
-                                  <li>🤖 Artificial Intelligence</li>
-                                  <li>🌐 Web and Mobile Development</li>
-                                  <li>🎮 Videogames</li>
-                                  <li>🗄️ Databases</li>
-                                  <li>🏗️ Software Architecture</li>
-                                </ul>
-                              </div>
-                          </div>
-                          <button class="carousel-btn next">›</button>
-                        </div>
-                      </div>
-                </div>
-
-              </div>
-          </div>
-        </div>
-        
-        <!--  ···································   Services   ··································· -->
-        <div class="swiper-slide">
-          <div class="container"> 
-            <h1>Services</h1>
-            <div class="card-container">
-              
-               <div class="grid-container">
-                  <div class="card">
-                    <h3>🎨 Diseño y 3D</h3>
-                    <p>Creación de experiencias visuales, modelado y diseño 3D enfocado 
-                      en estética moderna y profesional.</p>
-                  </div>
-
-                  <div class="card">
-                    <h3>🌐 Desarrollo de Sitios Web</h3>
-                    <p>Construcción de sitios web rápidos, responsivos y optimizados con 
-                      tecnologías modernas.</p>
-                  </div>
-
-                  <div class="card">
-                    <h3>📱 Desarrollo de Apps</h3>
-                    <p>Aplicaciones móviles multiplataforma, centradas en rendimiento y 
-                      experiencia de usuario.</p>
-                  </div>
-
-                  <div class="card">
-                    <h3>🎮 Apps Interactivas</h3>
-                    <p>Proyectos con Unity y Godot para crear juegos o experiencias 
-                      interactivas.</p>
-                  </div>
-
-                  <div class="card">
-                    <h3>🤖 Soluciones con AI</h3>
-                    <p>Integración de inteligencia artificial para potenciar proyectos 
-                      con herramientas inteligentes.</p>
-                  </div>
-
-                  <div class="card">
-                    <h3>⚙️ Automatización</h3>
-                    <p>Optimización de procesos con software a medida que mejora la 
-                      productividad.</p>
-                  </div>
-               </div>
+|_____assets
+|      |_____CV
+|      |_____font
+|      |_____icons
+|      |_____images
+|_____main
+|_____styles
+|_____index.html
 
 
-            </div>
-          </div>
-        </div>
-        
-        <!-- ···································   Projects   ··································· -->
-        <div class="swiper-slide">
-          <div class="container">
-            <h1>Projects</h1> 
-            <div class="botones-work">
-                <ul>
-                    <li class="filter active" data-nombre='todos'>All</li>
-                    <li class="filter" data-nombre='diseño'>Design</li>
-                    <li class="filter" data-nombre='programacion'>Programming</li>
-                    <li class="filter" data-nombre='marketing'>Marketing</li>
-                </ul>
-            </div>
-            <div class="card-container">
-               <div class="grid-container">
+## ⚙️ Installation & Usage
 
-                  <div class="card project-card programacion" id="card1">
-                    <h3>⚙️ Programacion</h3>
-                    <p>Optimización de procesos con software a medida que mejora la 
-                      productividad.</p>
-                  </div>
+1. Clone the repository:
 
-                  <div class="card project-card programacion" id="card2">
-                    <h3>⚙️ Programacion</h3>
-                    <p>Optimización de procesos con software a medida que mejora la 
-                      productividad.</p>
-                  </div>
-
-                  <div class="card project-card diseño" id="card3">
-                    <h3>⚙️ Diseño</h3>
-                    <p>Optimización de procesos con software a medida que mejora la 
-                      productividad.</p>
-                  </div>
-
-                  <div class="card project-card diseño" id="card4">
-                    <h3>⚙️ Diseño</h3>
-                    <p>Optimización de procesos con software a medida que mejora la 
-                      productividad.</p>
-                  </div>
-
-                  <div class="card project-card marketing" id="card5">
-                    <h3>⚙️ Marketing</h3>
-                    <p>Optimización de procesos con software a medida que mejora la 
-                      productividad.</p>
-                  </div>
-
-                  <div class="card project-card marketing" id="card6">
-                    <h3>⚙️ Marketing</h3>
-                    <p>Optimización de procesos con software a medida que mejora la 
-                      productividad.</p>
-                  </div>
-               </div>
+```bash
+git clone https://github.com/<usuario>/<repo>.git
+  cd <repo>
 
 
-            </div>
-          </div>
-        </div>
-        
-        <!-- ···································   Contact   ··································· -->
-        <div class="swiper-slide">
-          <div class="container">
-            <h1>Contact</h1> 
-            <div class="card-container">
-               <!-- Contact Me Section -->
-                <section class="contact-section" id="contact">
-                  <div class="contact-container">
-                    
-                    <!-- Form -->
-                    <form class="contact-form" action="https://formspree.io/f/tuID" method="POST">
-                      <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required placeholder="Your name">
-                      </div>
-                      <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required placeholder="Your email">
-                      </div>
-                      <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required placeholder="Write your message..."></textarea>
-                      </div>
-                      <button type="submit" class="primary-btn">Send</button>
-                    </form>
+## 📬 Contact
+  Email: sebastianchisavoforero@gmail.com
+  WhatsApp: https://wa.me/573008350972
 
-                    <!-- WhatsApp Button -->
-                    <div class="whatsapp-container">
-                      <a href="https://wa.me/573008350972" target="_blank" class="whatsapp-btn">
-                        💬 Write me on WhatsApp
-                      </a>
-                    </div>
-                  </div>
-                </section>
-
-            </div>
-          </div>
-        </div>
-      
-      </div>
-
-      <!-- Footer Points -->
-      <div class="swiper-pagination"></div>
-    </div>
-
-  </main>
-  <script src="main/script.js"></script>
-  <script src="main/sidebar.js"></script>
-  <script src="main/swiper.js"></script>
-  <script src="main/filter.js"></script>
-</body>
-</html>
+## 📌 Author
+  Sebastian Chisavo Forero
+  Software Engineer & Creative Developer
