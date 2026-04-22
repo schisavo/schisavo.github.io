@@ -1,11 +1,10 @@
-const themeBtn = document.querySelector(".sidebar__theme-btn");
-const themeIcon = themeBtn.querySelector("img");
+const themeBtn = document.getElementById("themeBtn");
 
 let isDark = false;
 
 themeBtn.addEventListener("click", () => {
 
-    // 🔥 animación fade OUT
+    // fade OUT
     themeBtn.classList.add("fade");
 
     setTimeout(() => {
@@ -13,20 +12,11 @@ themeBtn.addEventListener("click", () => {
         // cambiar tema
         isDark = !isDark;
 
-        if (isDark) {
-            document.body.classList.add("dark");
-            document.body.classList.remove("light");
+        document.body.classList.toggle("dark", isDark);
+        document.body.classList.toggle("light", !isDark);
 
-            themeIcon.src = "assets/icons/dark.ico";
-        } else {
-            document.body.classList.add("light");
-            document.body.classList.remove("dark");
-
-            themeIcon.src = "assets/icons/light.ico";
-        }
-
-        // 🔥 fade IN
+        // fade IN
         themeBtn.classList.remove("fade");
 
-    }, 200); // sincroniza con CSS
+    }, 250); // sincroniza con CSS
 });

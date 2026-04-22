@@ -11,7 +11,7 @@
   <!-- DevIcons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <!-- Styles CSS -->
-  <link rel="stylesheet" href="styles/new_css.css">
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
   
@@ -23,16 +23,27 @@
       <div class="sidebar__header"></div>
       <!-- List Options -->
       <ul class="sidebar__menu">
-        <li class="sidebar__link active__link" onclick="Navigate(0)">Home</li>
-        <li class="sidebar__link" onclick="Navigate(1)">About Me</li>
-        <li class="sidebar__link" onclick="Navigate(2)">Services</li>
-        <li class="sidebar__link" onclick="Navigate(3)">Projects</li>
-        <li class="sidebar__link" onclick="Navigate(4)">Contact Me</li>
+        <li class="sidebar__link active__link" data-label="Home" onclick="Navigate(0)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house-icon lucide-house"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        </li>
+        <li class="sidebar__link" data-label="About Me" onclick="Navigate(1)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-icon lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </li>
+        <li class="sidebar__link" data-label="Services" onclick="Navigate(2)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hand-platter-icon lucide-hand-platter"><path d="M12 3V2"/><path d="m15.4 17.4 3.2-2.8a2 2 0 1 1 2.8 2.9l-3.6 3.3c-.7.8-1.7 1.2-2.8 1.2h-4c-1.1 0-2.1-.4-2.8-1.2l-1.302-1.464A1 1 0 0 0 6.151 19H5"/><path d="M2 14h12a2 2 0 0 1 0 4h-2"/><path d="M4 10h16"/><path d="M5 10a7 7 0 0 1 14 0"/><path d="M5 14v6a1 1 0 0 1-1 1H2"/></svg>
+        </li>
+        <li class="sidebar__link" data-label="Projects" onclick="Navigate(3)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-laptop-icon lucide-laptop"><path d="M18 5a2 2 0 0 1 2 2v8.526a2 2 0 0 0 .212.897l1.068 2.127a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45l1.068-2.127A2 2 0 0 0 4 15.526V7a2 2 0 0 1 2-2z"/><path d="M20.054 15.987H3.946"/></svg>
+        </li>
+        <li class="sidebar__link" data-label="Contact Me" onclick="Navigate(4)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-contact-icon lucide-contact"><path d="M16 2v2"/><path d="M7 22v-2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/><path d="M8 2v2"/><circle cx="12" cy="11" r="3"/><rect x="3" y="4" width="18" height="18" rx="2"/></svg>
+        </li>
       </ul>
       <!-- Theme Buttons  -->
       <div class="sidebar__footer">
-        <button class="sidebar__theme-btn">
-          <img src="assets/icons/light.ico" alt="Theme Icon" srcset="">
+        <button class="sidebar__theme-btn" id="themeBtn">
+          <svg class="icon icon--sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          <svg class="icon icon--moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-moon-icon lucide-sun-moon"><path d="M12 2v2"/><path d="M14.837 16.385a6 6 0 1 1-7.223-7.222c.624-.147.97.66.715 1.248a4 4 0 0 0 5.26 5.259c.589-.255 1.396.09 1.248.715"/><path d="M16 12a4 4 0 0 0-4-4"/><path d="m19 5-1.256 1.256"/><path d="M20 12h2"/></svg>
         </button>
       </div>
     </nav>
@@ -226,26 +237,43 @@
                     <!-- Porjects Cards -->
                     <div class="card-container">
 
-                      <div class="card project-card programacion" id="card1">
-                        <h3>⚙️ Programacion</h3>
-                        <p>Optimización de procesos con software a medida que mejora la 
-                          productividad.</p>
-                      </div>
+                      <article class="card project-card programacion" id="card1">
+                        <h3>💻​ Virtual Chocolatery</h3>
+                        <p>Unity - Blender</p>
+                        <div class="icons--project">
+                            <a href="https://play.google.com/store/apps/details?id=com.chocolateria.sena.tpc.virtuales&pcampaignid=web_share" 
+                              target="_blank" 
+                              class="project-card__link">
+                              <img src="assets/icons/platforms/google-play.ico" alt="Ver proyecto">
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=com.chocolateria.sena.tpc.virtuales&pcampaignid=web_share" 
+                              target="_blank" 
+                              class="project-card__link">
+                              <img src="assets/icons/platforms/google-play.ico" alt="Ver proyecto">
+                            </a>
+                        </div>
+                      </article>
 
-                      <div class="card project-card programacion" id="card2">
-                        <h3>⚙️ Programacion</h3>
-                        <p>Optimización de procesos con software a medida que mejora la 
-                          productividad.</p>
-                      </div>
+                      <article class="card project-card programacion" id="card2">
+                        <h3>💻​ TrustbyReview</h3>
+                        <p>React - Typescript</p>
+                        <div class="icons--project">
+                            <a href="https://new.trustbyreviews.com/" 
+                              target="_blank" 
+                              class="project-card__link">
+                              <img src="assets/icons/platforms/google.ico" alt="Ver proyecto">
+                            </a>
+                        </div>
+                      </article>
 
                       <div class="card project-card diseño" id="card3">
-                        <h3>⚙️ Diseño</h3>
+                        <h3>🖌️​ Diseño</h3>
                         <p>Optimización de procesos con software a medida que mejora la 
                           productividad.</p>
                       </div>
 
                       <div class="card project-card diseño" id="card4">
-                        <h3>⚙️ Diseño</h3>
+                        <h3>🖌️​ Diseño</h3>
                         <p>Optimización de procesos con software a medida que mejora la 
                           productividad.</p>
                       </div>
