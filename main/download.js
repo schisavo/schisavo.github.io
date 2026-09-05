@@ -14,6 +14,10 @@ btn.addEventListener("click", function () {
   const filePath = isSpanish 
     ? "assets/CV/es/CV.pdf" 
     : "assets/CV/en/CV.pdf"; 
+  // Name Of File
+  const fileName = isSpanish 
+    ? "IngenieroDeSoftwareSebastianChisavoForero.pdf" 
+    : "SoftwareEngineerSebastianChisavoForero.pdf"; 
 
   bar.style.width = "0%";
   void bar.offsetWidth;
@@ -22,7 +26,7 @@ btn.addEventListener("click", function () {
   setTimeout(() => {
     const link = document.createElement("a");
     link.href = filePath;
-    link.download = "sebastian_chisavo_forero_cv.pdf";
+    link.download = fileName;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

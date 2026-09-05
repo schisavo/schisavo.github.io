@@ -5,7 +5,7 @@ A modern and interactive 3D portfolio built with HTML, CSS, and JavaScript, usin
 ---
 
 ## 🌐 Live Demo
-👉 https://<usuario>.github.io/<nombre-repo>/
+👉 https://schisavo.github.io
 
 ---
 
